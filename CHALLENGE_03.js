@@ -1,8 +1,6 @@
 import fs from "fs"
 
-let keys = fs.readFileSync("./INFO-CHALLENGE_03.txt","utf-8")
-
-keys = keys.split("\r\n")
+let keys = fs.readFileSync("./INFO-CHALLENGE_03.txt","utf-8").split("\r\n")
 let valid_keys = []
 let invalid_keys = []
 
@@ -13,15 +11,12 @@ keys.forEach(key => {
     let code = politics[2]
     let count = code.split("").filter(element => element == letter).length
     if (count >= range[0] && count <= range[1]){
-        valid_keys.push(key)
+        valid_keys.push(code)
     } else{
-        invalid_keys.push(key)
+        invalid_keys.push(code)
     }
 });
 
-console.log(valid_keys)
-console.log(invalid_keys)
+console.log(`Clave inválida #13: ${invalid_keys[12]}`)
 
-console.log(invalid_keys[12])
-
-console.log(invalid_keys[41])
+console.log(`Clave inválida #42: ${invalid_keys[41]}`)
