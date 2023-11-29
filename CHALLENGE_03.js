@@ -1,6 +1,6 @@
 import fs from "fs"
 
-let keys = fs.readFileSync("./INFO-CHALLENGE_03.txt","utf-8").split("\r\n")
+let keys = fs.readFileSync("./CHALLENGE_03.txt","utf-8").split("\r\n")
 let valid_keys = []
 let invalid_keys = []
 
